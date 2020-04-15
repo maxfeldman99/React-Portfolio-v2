@@ -1,0 +1,10 @@
+.ant-layout-sider{
+    background: white;
+}
+
+.ant-layout-sider-dark{
+    flex: 0 0 200px; max-width: 200px; min-width: 400px; width: 200px;
+    background-color: white;
+    color: rgb(196, 20, 143);
+}
+
