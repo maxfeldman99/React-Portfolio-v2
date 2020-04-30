@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
+
+
+
 .App {
   text-align: center;
 }
@@ -31,9 +34,18 @@
   color: #61dafb;
 }
 
+
+.sider {
+  overflow: auto;
+  height: 100vh;
+  position: sticky;        
+  top: 0;
+  left: 0;
+}
+
 .sider-image{
-  margin-top: 6rem;
-  margin-left: 4.3rem;
+  margin-top: 4rem;
+  margin-left: 2.3rem;
 }
 .sider-text h1{
   margin-top: 1.5rem;
@@ -54,18 +66,11 @@
 }
 
 .image-art {
-  background: url("../src/assets/images/fulls/01.jpg") no-repeat 6px center;
+  /* background: url("../src/assets/images/fulls/01.jpg") no-repeat 6px center; */
   width: 300px;
   height: 300px;
   display: block;
 }
-
-
-
-
-
-
-
 
 
 body {
@@ -84,31 +89,29 @@ a {
   margin: auto;
   overflow: auto;
   padding: 0 2rem;
+  /* background: #333; */
 }
 
 .main-header {
-  height: 40vh;
-  padding: 2rem;
+  height: 70vh;
+  padding: 0 0 ;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #f1f1f1;
+  background-image:url("../src/assets/images/bg1.jpg");
   font-family: 'Source Sans Pro';
   /* font-family: 'Oswald', sans-serif; */
   
 }
 
 .main-header h1 {
-  font-size: 3rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   line-height: 1;
-  background: #f1f1f1;
   font-family: 'Source Sans Pro';
-  
-  
-  
+
 }
 
 .main-header h1 span {
@@ -125,14 +128,17 @@ img {
   width: 100%;
 }
 
+
 .card {
   display: grid;
+  border-radius: 25px;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   background: #f1f1f1;
   margin-bottom: 2rem;
   /* font-family: 'Oswald', sans-serif; */
   font-family: 'Source Sans Pro';
+  box-shadow: 3px 3px 6px grey;
 }
 
 .card h3 {
@@ -140,7 +146,8 @@ img {
 }
 
 .card img {
-  height: 400px;
+  /* border-radius: 10px 0 0px 10px; */
+  height: 370px;
 }
 
 .card > div {
@@ -149,6 +156,7 @@ img {
 
 .card:nth-child(even) img {
   order: 2;
+  border-radius: 0 10px 10px 0;
 }
 
 
@@ -165,10 +173,163 @@ img {
   opacity: 0.8;
 }
 
-@media(max-width:600px) {
-  .card {
-    display: block;
+.card-footer {
+  margin-left: 55px;
+  margin-top : 60px;
+}
+.card-footer-item {
+  margin-left: 55px;
+}
+
+.footer{
+  /* background: #000; */
+
+}
+.footer > div {
+  padding: 1rem;
+  text-align: center;
+}
+
+.sider-icon{
+  font-size: 44px;
+  color: #FFFFFF;
+}
+
+.header-title {
+  display: none;
+  font-size: 1.7rem;
+ font-family: 'Oswald', sans-serif;
+ 
+}
+
+.mobile-header-title{
+  font-size: 1.7rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.mobile-header-container{
+  display: block;
+  height: 100%;
+  
+}
+
+.header-image{
+  
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+/* Build a Responsive News Blog Post Card | */
+
+
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mobile-card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  padding: 0 1.5rme;
+}
+
+.proj-post{
+  width:100%;
+  max-width: 98rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0,0,0,.2);
+  display: flex;
+  align-items: center;
+  border-radius: .8rem;
+
+}
+
+.proj-post__img{
+  min-width: 35rem;
+  max-width: 35rem;
+  height: 30rem;
+  transform: translateX(-8rem);
+  position: relative;
+}
+
+.proj-post__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .8rem;
+}
+
+.proj-post__img::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right,rgba(79,172,254,.8),rgba(0,242,254,.8));
+  box-shadow: .5rem .5rem 3rem 1px rgba(0,0,0,.05);
+  border-radius: .8rem;
+}
+
+.proj-post__title{
+  font-size: 2.5rem;
+  margin: 1.5rem 0 2rem;
+  text-transform: uppercase;
+  color: #4facfe
+}
+
+.proj-post__text{
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0.7)
+}
+
+.proj-post__cta{
+  display: inline-block;
+  padding: 1.5rem  3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  background-image: linear-gradient(to right,#4facfe 0%,#00f2fe 100%);
+  border-radius: .8rem;
+  text-decoration: none;
+}
+
+.proj-post__cta:hover{
+  background-image: linear-gradient(to right,#00f2fe,#4facfe 0%, 100%);
+}
+
+@media screen and (max-width: 868px){
+  .proj-post{
+    max-width: 70rem;
+    
   }
+
+
+}
+
+@media screen and (max-width: 768px){
+  .proj-post{
+    padding: 2.5rem;
+    flex-direction: column;
+  }
+  .proj-post__img{
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(0,-8rem);
+
+  }
+
 }
 
 
@@ -178,6 +339,104 @@ img {
 
 
 
+
+@media only screen and (min-width: 768px){
+  .mobile-header-container{
+    display: none;
+    height: 100%;
+    background-image:url("../src/assets/images/bg1.jpg");
+    
+  }
+
+
+  .header-title {
+    font-size: 3.3rem;
+   font-family: 'Oswald', sans-serif;
+   
+  }
+
+  .main-header {
+    height: 40vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+    font-family: 'Source Sans Pro';
+    /* font-family: 'Oswald', sans-serif; */
+    
+  }
+  
+  .main-header h1 { 
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1;
+    background: #ffffff;
+    font-family: 'Source Sans Pro';
+    
+  }
+  
+  .main-header h1 span {
+    color: #b50d10;
+  }
+  
+  .main-header p {
+    font-size: 1.rem;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Source Sans Pro';
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  
+  .card {
+    display: grid;
+    border-radius: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    background: #f1f1f1;
+    margin-bottom: 2rem;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Source Sans Pro';
+    box-shadow: 3px 3px 6px grey;
+  }
+  
+  .card h3 {
+    margin-bottom: 2rem;
+  }
+  
+  .card img {
+    /* border-radius: 10px 0 0px 10px; */
+    height: 370px;
+  }
+  
+  .card > div {
+    padding: 2rem;
+  }
+  
+  .card:nth-child(even) img {
+    order: 2;
+    border-radius: 0 10px 10px 0;
+  }
+
+
+}
+
+
+
+
+
+/* @media(max-width:600px) {
+  .card {
+    display: block;
+  }
+} */
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -185,9 +444,6 @@ img {
   to {
     transform: rotate(360deg);
   }
-
-
-  
 
 
 
