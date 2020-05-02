@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/React-Portfolio-v2/static/css/main.4c5a1c6e.chunk.css",
-    "main.js": "/React-Portfolio-v2/static/js/main.d029b755.chunk.js",
-    "main.js.map": "/React-Portfolio-v2/static/js/main.d029b755.chunk.js.map",
+    "main.js": "/React-Portfolio-v2/static/js/main.42b1fc1e.chunk.js",
+    "main.js.map": "/React-Portfolio-v2/static/js/main.42b1fc1e.chunk.js.map",
     "runtime-main.js": "/React-Portfolio-v2/static/js/runtime-main.38d39138.js",
     "runtime-main.js.map": "/React-Portfolio-v2/static/js/runtime-main.38d39138.js.map",
     "static/css/2.d991b256.chunk.css": "/React-Portfolio-v2/static/css/2.d991b256.chunk.css",
-    "static/js/2.0cd6840d.chunk.js": "/React-Portfolio-v2/static/js/2.0cd6840d.chunk.js",
-    "static/js/2.0cd6840d.chunk.js.map": "/React-Portfolio-v2/static/js/2.0cd6840d.chunk.js.map",
+    "static/js/2.83820644.chunk.js": "/React-Portfolio-v2/static/js/2.83820644.chunk.js",
+    "static/js/2.83820644.chunk.js.map": "/React-Portfolio-v2/static/js/2.83820644.chunk.js.map",
     "index.html": "/React-Portfolio-v2/index.html",
-    "precache-manifest.69533758ba2724cff2d05b3721ea9990.js": "/React-Portfolio-v2/precache-manifest.69533758ba2724cff2d05b3721ea9990.js",
+    "precache-manifest.47ac99a17e43b80fca0884bcb70dacf3.js": "/React-Portfolio-v2/precache-manifest.47ac99a17e43b80fca0884bcb70dacf3.js",
     "service-worker.js": "/React-Portfolio-v2/service-worker.js",
     "static/css/2.d991b256.chunk.css.map": "/React-Portfolio-v2/static/css/2.d991b256.chunk.css.map",
     "static/css/main.4c5a1c6e.chunk.css.map": "/React-Portfolio-v2/static/css/main.4c5a1c6e.chunk.css.map",
-    "static/js/2.0cd6840d.chunk.js.LICENSE.txt": "/React-Portfolio-v2/static/js/2.0cd6840d.chunk.js.LICENSE.txt",
+    "static/js/2.83820644.chunk.js.LICENSE.txt": "/React-Portfolio-v2/static/js/2.83820644.chunk.js.LICENSE.txt",
     "static/media/App.css": "/React-Portfolio-v2/static/media/bg1.eb51da5c.jpg",
     "static/media/bg2.jpg": "/React-Portfolio-v2/static/media/bg2.eb51da5c.jpg",
     "static/media/codingLogo.2bc87692.svg": "/React-Portfolio-v2/static/media/codingLogo.2bc87692.svg",
@@ -36,8 +36,8 @@
   "entrypoints": [
     "static/js/runtime-main.38d39138.js",
     "static/css/2.d991b256.chunk.css",
-    "static/js/2.0cd6840d.chunk.js",
+    "static/js/2.83820644.chunk.js",
     "static/css/main.4c5a1c6e.chunk.css",
-    "static/js/main.d029b755.chunk.js"
+    "static/js/main.42b1fc1e.chunk.js"
   ]
 }
