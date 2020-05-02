@@ -18,7 +18,7 @@ import ProjectDataContainer from './ProjectDataContainer';
   return(
 
         
-        <Router>
+        <Router basename="React-Portfolio-v2">
             <Switch>
                   <Redirect exact from="/" to="Home" />
                   <Route path="/Home" exact component={Home} />
