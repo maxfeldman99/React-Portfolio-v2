@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch ,Route,Link,Redirect } from 'react-router-dom';
 import {TransitionGroup,CSSTransition } from 'react-transition-group';
 import './App.css';
-
+import './style.scss'
 import RoundedImage from "react-rounded-image";
 import ProjectCard from './ProjectCard';
 import Home from './Home';

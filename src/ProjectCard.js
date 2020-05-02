@@ -1,42 +1,91 @@
 import React, {Component} from 'react';
-import Icon from '@ant-design/icons';
-
-import img1 from '../src/assets/images/fulls/pd.jpg';
-import img2 from '../src/assets/images/fulls/sb.jpg';
+import {useHistory ,withRouter } from 'react-router-dom'
 import {
- Button
-} from 'antd';
+  AwesomeButton
+} from 'react-awesome-button';
+import 'react-awesome-button/dist/themes/theme-blue.css';
+import { render } from '@testing-library/react';
 
-
-import {ReactComponent as Github} from '../src/assets/svg/github.svg'
-import {Divider} from 'antd';
-
-function GitHubContainer(props)  {
-   
+class GitHubContainer extends Component  {
+  constructor(props) {
+    super(props)
+    console.log('after constructor')
+    console.log(this.props)
+    this.state = { private: false ,sourceButton : "Source Code",button:"medium"}
+  }
     
+  componentDidMount (){
+    this.initDevice();
+    this.initRepo();
+  }
     
-    return (
-        <section class="card" data-aos={props.projectInfo.fade}>
-        {/* <img src={img2}/>   */}
-        <img src={require(`../src/assets/images/fulls/${props.projectInfo.img}.jpg`)}/>
-        <div>
-          <h3>{props.projectInfo.text1}</h3>
-          <p>{props.projectInfo.text2}</p>
-          {/* <a href="#" class="btn" >Check now</a> */}
-        <div class="card-footer">
-          <Button shape="round" size="large " onClick={(e) => {
-            
-            window.location = props.projectInfo.info
-          }}>Read more</Button>
-          <Button style={{marginLeft: "25px"}} shape="round" size="large ">Source code</Button>
-          {/* <Icon style={{ fontSize: '44px' ,marginLeft:"100px"}} component={Github} onClick={(e) => { 
-            e.preventDefault();
-            //window.location = record.html_url;    
-          }} /> */}
-        </div>
-        </div>
+  
+  initRepo = () => {
+    console.log("current repo is " + this.props.projectInfo.repo)
+    if(this.props.projectInfo.repo=="private"){
+      console.log("changed")
+      this.setState({
+        private: true,
+        sourceButton: "private"
+      });
+    }
+  }
+
+  initDevice = () => {
+    if(window.innerWidth <= 768){
+      console.log("setting to small")
+      this.setState({
+        button: "small"
+      });
+    }
+    else{
+      console.log("screen is big")
+    }
+  }
+
+
+    
+ 
+    render(){
+      const { location, history } = this.props
+
+      // const history = useHistory();
+      
+      function handleProjectInfoClick(props) {
+        console.log('inside ProjectCard '+ props)
+        history.push({pathname:"/Project",state: { detail : props }});
+      }
+    
+
+      return (
+        <section class="card" data-aos={this.props.projectInfo.fade}>
+          <img src={require(`../src/assets/images/fulls/${this.props.projectInfo.img}.jpg`)}/>
+          <div>
+            <div class="card-text-area">
+              <h3>{this.props.projectInfo.text1}</h3>
+              <p>{this.props.projectInfo.text2}</p>
+              {/* <a href="#" class="btn" >Check now</a> */}
+            </div>
+            <div class="card-footer">
+              <AwesomeButton type="primary" ripple={true} size={this.state.button} onPress={next => {
+                if(this.props.projectInfo.info.startsWith("http")){
+                  window.location = this.props.projectInfo.info
+                }else{
+                  handleProjectInfoClick(this.props.projectInfo.info)
+                }
+              }}>Read More</AwesomeButton>
+
+              <AwesomeButton disabled={this.state.private}  type="primary"  size={this.state.button} style={{marginLeft: "25px"}} onPress={next => {
+                window.location = this.props.projectInfo.repo
+              }}>{this.state.sourceButton}</AwesomeButton>
+            </div>
+          </div>
       </section>
     )
+    }
+
+
+    
 }
 
-export default GitHubContainer
+export default withRouter(GitHubContainer)

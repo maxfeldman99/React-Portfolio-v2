@@ -24,12 +24,6 @@ class MarkdownContainer extends Component {
     })
   };
 
-  // componentWillMount(prevProps) {
-  //   if(this.props.user !== prevProps.user && this.props.repo !== prevProps.repo)
-  //   fetch(`https://api.github.com/repos/${props.user}/${props.repo}/contents/${props.path}`).then((response) => response.text()).then((text) => {
-  //     this.setState({ terms: text })
-  //   })
-  // }
 
   componentWillMount(props) {
     console.log('blabla')

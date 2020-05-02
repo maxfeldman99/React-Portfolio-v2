@@ -9,6 +9,7 @@ import {
   Modal,
   Empty
 } from 'antd';
+
 import Icon from '@ant-design/icons';
 import {ReactComponent as Java} from './assets/svg/javaLogo.svg'
 import {ReactComponent as CSS} from './assets/svg/cssLogo.svg'
@@ -109,6 +110,7 @@ class GitHubContainer extends Component{
             title: 'Repository Name',
             dataIndex: 'name',
             key: 'name'
+            
           },
           {
             title: 'Language',
@@ -118,6 +120,7 @@ class GitHubContainer extends Component{
           {
             title: '',
             dataIndex: 'avatar',
+            responsive: ['lg'],
             render: (text, language) => (
                
               <Icon style={{ fontSize: '44px'}} component={this.getComponent(language.language)}  />
@@ -126,12 +129,14 @@ class GitHubContainer extends Component{
           {
             title: 'Created at',
             dataIndex: 'created_at',
-            key: 'created_at'
+            key: 'created_at',
+            responsive: ['lg']
           },
           {
             title: 'Last updated',
             dataIndex: 'updated_at',
-            key: 'updated_at'
+            key: 'updated_at',
+            responsive: ['lg']
           },
           {
             title: 'Source code',
@@ -150,6 +155,7 @@ class GitHubContainer extends Component{
       
   
       return (
+      
       <Table
       onRow={(record, rowIndex) => {
         return {
@@ -169,6 +175,7 @@ class GitHubContainer extends Component{
         dataSource={repos}
         columns={columns}
         rowKey='name' />
+        
          );
   
         
