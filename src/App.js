@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Switch ,Route,Link,Redirect } from 'react-router-dom';
+import {BrowserRouter as Router, Switch ,Route,Link,Redirect,HashRouter } from 'react-router-dom';
 import {TransitionGroup,CSSTransition } from 'react-transition-group';
 import './App.css';
 import './style.scss'
@@ -18,13 +18,13 @@ import ProjectDataContainer from './ProjectDataContainer';
   return(
 
         
-        <Router basename="React-Portfolio-v2">
+        <HashRouter basename="React-Portfolio-v2">
             <Switch>
                   <Redirect exact from="/" to="Home" />
                   <Route path="/Home" exact component={Home} />
                   <Route path="/Project" exact component={ProjectDataContainer} />
             </Switch>
-        </Router>
+        </HashRouter>
 
   );
 
