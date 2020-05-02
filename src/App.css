@@ -356,10 +356,11 @@ img {
 }
 .sider-text h1{
   margin-top: 1.5rem;
-  margin-right: 0.5erm;
+  margin-right: 2.2rem;
   color:#f1f1f1;
   font-family: 'Roboto', sans-serif;
-
+  font-size: 0.8rem;
+  text-align: center;
 
 }
 
@@ -421,6 +422,7 @@ img {
   .main-top-text{
     padding-top: 15px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
   }
   
   

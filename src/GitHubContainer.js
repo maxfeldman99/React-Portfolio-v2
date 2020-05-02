@@ -115,12 +115,12 @@ class GitHubContainer extends Component{
           {
             title: 'Language',
             dataIndex: 'language',
-            key: 'language'
+            key: 'language',
+            responsive: ['lg']
           },
           {
             title: '',
             dataIndex: 'avatar',
-            responsive: ['lg'],
             render: (text, language) => (
                
               <Icon style={{ fontSize: '44px'}} component={this.getComponent(language.language)}  />
