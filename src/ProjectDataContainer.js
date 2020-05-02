@@ -5,6 +5,9 @@ import {
 } from 'antd';
 import {useHistory,withRouter,useLocation } from 'react-router-dom'
 import MarkdownContainer from './MarkdownContainer';
+import {
+  AwesomeButton
+} from 'react-awesome-button';
 
 
 
@@ -26,10 +29,10 @@ function ProjectDataContainer(props)  {
 
       <Layout>
         <Header>
-        <Button size="large " onClick={(e) => {
-            
-            handleRouteClick()
-          }}>Go Back Home</Button>
+
+        <AwesomeButton type="primary"  size="medium"  onPress={next => {
+                handleRouteClick()
+              }}>Go Back Home</AwesomeButton>
       
         </Header>
         <Content>
